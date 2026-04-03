@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initProductFilter();
     initScrollAnimations();
+    initProductDetails();
 });
 
 /* ============ STYLE SWITCHER ============ */
@@ -192,13 +193,77 @@ function initScrollAnimations() {
 
     // Add animation classes to elements
     const animateElements = document.querySelectorAll(
-        '.section-header, .product-card, .about__feature, .cooking-step, .contact__card, .products__gift-cta'
+        '.section-header, .process-card, .about__feature, .cooking-step, .contact__card, .products__gift-cta'
     );
 
     animateElements.forEach(el => {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
     });
+}
+
+/* ============ PRODUCT DETAILS MODAL ============ */
+function initProductDetails() {
+    const productsCards = document.querySelectorAll('.product-card');
+    productsCards.forEach(card => {
+        const orderBtn = card.querySelector('.product-card__overlay .btn');
+        if (orderBtn) {
+            orderBtn.innerHTML = "Xem Chi Tiết";
+            orderBtn.removeAttribute('onclick'); // Xóa onclick cũ
+            orderBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openProductDetail(card);
+            });
+        }
+        
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            if(!e.target.closest('button')) {
+                openProductDetail(card);
+            }
+        });
+    });
+}
+
+function openProductDetail(card) {
+    const name = card.querySelector('.product-card__name').textContent;
+    const desc = card.querySelector('.product-card__desc').textContent;
+    const price = card.querySelector('.product-card__price').textContent;
+    const weight = card.querySelector('.product-card__weight').textContent;
+    const category = card.querySelector('.product-card__category').textContent;
+    const imgSrc = card.querySelector('.product-card__image img').src;
+    const badge = card.querySelector('.product-card__badge');
+
+    document.getElementById('detailTitle').textContent = name;
+    document.getElementById('detailDesc').textContent = desc;
+    document.getElementById('detailPrice').textContent = price;
+    document.getElementById('detailWeight').textContent = weight;
+    document.getElementById('detailCategory').textContent = category;
+    document.getElementById('detailImage').src = imgSrc;
+    
+    const detailBadge = document.getElementById('detailBadge');
+    if (badge) {
+        detailBadge.textContent = badge.textContent;
+        detailBadge.className = badge.className; // copy styles like VIP, New
+        detailBadge.style.display = 'block';
+    } else {
+        detailBadge.style.display = 'none';
+    }
+
+    document.getElementById('detailOrderBtn').onclick = () => {
+        closeProductDetailModal();
+        orderProduct(name);
+    };
+
+    const modal = document.getElementById('productDetailModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetailModal() {
+    document.getElementById('productDetailModal').classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 /* ============ ORDER PRODUCT ============ */
@@ -218,7 +283,10 @@ function closeModal() {
 
 // Close modal on Escape
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+        closeModal();
+        closeProductDetailModal();
+    }
 });
 
 /* ============ CONTACT FORM ============ */
