@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gạo Thơm ST25 Lộc Khang - Hạt Ngọc Trời Ban. Gạo sạch, chất lượng cao từ Công ty TNHH SX & TM Thiên Lộc Khang.">
+    <meta name="keywords" content="gạo ST25, gạo Lộc Khang, gạo thơm, gạo ngon nhất thế giới, mua gạo online">
+    <title>Gạo Thơm Lộc Khang - Hạt Ngọc Trời Ban | ST25 Premium Rice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-style="classic-green">
+
+    <!-- ============ FLOATING STYLE SWITCHER ============ -->
+    <div class="style-switcher" id="styleSwitcher">
+        <button class="style-switcher__toggle" id="styleSwitcherToggle" aria-label="Đổi giao diện">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <span>Style</span>
+        </button>
+        <div class="style-switcher__panel" id="styleSwitcherPanel">
+            <h4>Chọn Giao Diện</h4>
+            <div class="style-switcher__options">
+                <button class="style-option active" data-style="classic-green" title="Xanh Lá Cổ Điển">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #1a5c2e 0%, #2d8a4e 50%, #c9a84c 100%)"></span>
+                    <span class="style-option__name">Cổ Điển</span>
+                </button>
+                <button class="style-option" data-style="luxury-dark" title="Sang Trọng Tối">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #c9a84c 100%)"></span>
+                    <span class="style-option__name">Luxury</span>
+                </button>
+                <button class="style-option" data-style="warm-earth" title="Ấm Áp Đất">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #5c3d2e 0%, #a0522d 50%, #f4e4c1 100%)"></span>
+                    <span class="style-option__name">Ấm Áp</span>
+                </button>
+                <button class="style-option" data-style="modern-mint" title="Hiện Đại Bạc Hà">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #0d9488 0%, #a7f3d0 50%, #f0fdf4 100%)"></span>
+                    <span class="style-option__name">Bạc Hà</span>
+                </button>
+                <button class="style-option" data-style="royal-plum" title="Hoàng Gia Mận">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #4a1942 0%, #893168 50%, #e8b4b8 100%)"></span>
+                    <span class="style-option__name">Hoàng Gia</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="nav__logo">
+                    <img src="images/logo.png" alt="Logo Thiên Lộc Khang" class="nav__logo-img">
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li><a href="index.html" class="nav__link">Trang Chủ</a></li>
+                    <li><a href="#products" class="nav__link active" data-section="products">Sản Phẩm</a></li>
+                    <li><a href="index.html#process" class="nav__link">Quy Trình</a></li>
+                    <li><a href="index.html#about" class="nav__link">Giới Thiệu</a></li>
+                    <li><a href="contact.html" class="nav__link">Liên Hệ</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="tel:0910926839" class="btn btn--primary nav__cta">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Đặt Hàng
+                    </a>
+                    <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for Header -->
+    <div style="height: 100px;"></div>
+
+    <!-- ============ PRODUCTS SECTION ============ -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-header__tag">Bộ Sưu Tập</span>
+                <h2 class="section-header__title">Sản Phẩm Của Chúng Tôi</h2>
+                <p class="section-header__desc">Đa dạng loại gạo chất lượng cao, đáp ứng mọi nhu cầu của gia đình Việt</p>
+            </div>
+
+            <!-- Product Filter -->
+            <div class="products__filter">
+                <button class="products__filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="products__filter-btn" data-filter="premium">Cao Cấp</button>
+                <button class="products__filter-btn" data-filter="popular">Phổ Thông</button>
+                <button class="products__filter-btn" data-filter="special">Đặc Biệt</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products__grid">
+                <!-- Product 1 - ST25 -->
+                <div class="product-card product-card--featured" data-category="premium">
+                    <div class="product-card__badge">Bán Chạy</div>
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/01_mockup_bao_bi_loc_khang.png" alt="Gạo ST25 Lộc Khang" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Thơm ST25')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Cao Cấp</span>
+                        <h3 class="product-card__name">Gạo Thơm ST25</h3>
+                        <p class="product-card__desc">Hạt thon dài, trắng đều, dẻo và ngọt tự nhiên. Gạo ngon nhất thế giới.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">180.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 - ST25 VIP -->
+                <div class="product-card" data-category="premium">
+                    <div class="product-card__badge product-card__badge--vip">VIP</div>
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/12_bao_bi_gao_st25_vip.png" alt="Gạo ST25 VIP" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo ST25 VIP')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Cao Cấp</span>
+                        <h3 class="product-card__name">Gạo ST25 VIP</h3>
+                        <p class="product-card__desc">Phiên bản thượng hạng, chọn lọc từ những hạt gạo tốt nhất.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">220.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - ST24 -->
+                <div class="product-card" data-category="premium">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/11_bao_bi_gao_st24.png" alt="Gạo ST24" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo ST24')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Cao Cấp</span>
+                        <h3 class="product-card__name">Gạo ST24</h3>
+                        <p class="product-card__desc">Giống gạo tiền nhiệm nổi tiếng, hương thơm đặc trưng.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">160.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Lai Miên -->
+                <div class="product-card" data-category="popular">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/13_bao_bi_gao_lai_mien.png" alt="Gạo Lai Miên" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Lai Miên')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Phổ Thông</span>
+                        <h3 class="product-card__name">Gạo Lai Miên</h3>
+                        <p class="product-card__desc">Gạo Cambodian Jasmine, hạt dài, thơm nhẹ, cơm mềm dẻo.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">140.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Tám Thơm -->
+                <div class="product-card" data-category="popular">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/14_bao_bi_gao_tam_thom.png" alt="Gạo Tám Thơm" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Tám Thơm')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Phổ Thông</span>
+                        <h3 class="product-card__name">Gạo Tám Thơm</h3>
+                        <p class="product-card__desc">Hương thơm đặc trưng vùng miền Bắc, cơm dẻo thơm ngon.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">120.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Nếp Cái -->
+                <div class="product-card" data-category="special">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/15_bao_bi_gao_nep_cai.png" alt="Gạo Nếp Cái" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Nếp Cái')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Đặc Biệt</span>
+                        <h3 class="product-card__name">Gạo Nếp Cái</h3>
+                        <p class="product-card__desc">Nếp dẻo thơm, lý tưởng cho các món xôi và bánh truyền thống.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">2kg</span>
+                            <span class="product-card__price">70.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Huyết Rồng -->
+                <div class="product-card" data-category="special">
+                    <div class="product-card__badge product-card__badge--new">Mới</div>
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/16_bao_bi_gao_huyet_rong.png" alt="Gạo Huyết Rồng" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Huyết Rồng')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Đặc Biệt</span>
+                        <h3 class="product-card__name">Gạo Huyết Rồng</h3>
+                        <p class="product-card__desc">Gạo lứt đỏ giàu dinh dưỡng, tốt cho sức khỏe tim mạch.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">2kg</span>
+                            <span class="product-card__price">85.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Nàng Hoa -->
+                <div class="product-card" data-category="popular">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/17_bao_bi_gao_nang_hoa.png" alt="Gạo Nàng Hoa" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Nàng Hoa')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Phổ Thông</span>
+                        <h3 class="product-card__name">Gạo Nàng Hoa</h3>
+                        <p class="product-card__desc">Gạo thơm nhẹ, hạt dài trắng, cơm mềm phù hợp bữa cơm gia đình.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">110.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Đài Thơm 8 -->
+                <div class="product-card" data-category="popular">
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/18_bao_bi_gao_dai_thom_8.png" alt="Gạo Đài Thơm 8" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Đài Thơm 8')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Phổ Thông</span>
+                        <h3 class="product-card__name">Gạo Đài Thơm 8</h3>
+                        <p class="product-card__desc">Giống gạo năng suất cao, hạt trắng đẹp, giá thành hợp lý.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">5kg</span>
+                            <span class="product-card__price">100.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 - Gạo Hữu Cơ -->
+                <div class="product-card" data-category="special">
+                    <div class="product-card__badge product-card__badge--organic">Hữu Cơ</div>
+                    <div class="product-card__image">
+                        <img src="images/loc_khang_generated/20_bao_bi_gao_huu_co.png" alt="Gạo Hữu Cơ" loading="lazy">
+                        <div class="product-card__overlay">
+                            <button class="btn btn--primary btn--sm" onclick="orderProduct('Gạo Hữu Cơ')">Đặt Hàng</button>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <span class="product-card__category">Đặc Biệt</span>
+                        <h3 class="product-card__name">Gạo Hữu Cơ</h3>
+                        <p class="product-card__desc">Canh tác hữu cơ, không thuốc trừ sâu, an toàn tuyệt đối.</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__weight">2kg</span>
+                            <span class="product-card__price">135.000đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gift Box CTA -->
+            <div class="products__gift-cta">
+                <div class="products__gift-cta-content">
+                    <img src="images/loc_khang_generated/08_hop_qua_tang_cao_cap_loc_khang.png" alt="Hộp quà tặng cao cấp Lộc Khang" class="products__gift-img" loading="lazy">
+                    <div class="products__gift-text">
+                        <h3>Hộp Quà Tặng Cao Cấp</h3>
+                        <p>Món quà ý nghĩa dành tặng người thân, đối tác — Gạo ST25 thượng hạng trong hộp quà sang trọng.</p>
+                        <a href="tel:0910926839" class="btn btn--primary">Đặt Quà Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROMO BANNER ============ -->
+    <section class="promo-banner">
+        <div class="promo-banner__bg">
+            <img src="images/loc_khang_generated/22_banner_promo_san_pham.png" alt="Khuyến mãi Lộc Khang" loading="lazy">
+            <div class="promo-banner__overlay"></div>
+        </div>
+        <div class="container promo-banner__content">
+            <span class="promo-banner__tag">Ưu Đãi Đặc Biệt</span>
+            <h2 class="promo-banner__title">Gạo Ngon Lộc Khang<br>Mang Xuân Về Nhà</h2>
+            <p class="promo-banner__desc">Chương trình khuyến mãi từ 25/06/2025 – 24/07/2025. Liên hệ ngay để nhận ưu đãi hấp dẫn!</p>
+            <a href="tel:0910926839" class="btn btn--primary btn--lg">Gọi Ngay: 0910 926 839</a>
+        </div>
+    </section>
+
+
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="images/logo.png" alt="Logo Thiên Lộc Khang" class="nav__logo-img">
+                    </div>
+                    <p>Gạo Thơm ST25 — Hạt Ngọc Trời Ban. Tinh hoa gạo Việt, nâng niu bữa cơm Việt.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="index.html#process">Quy Trình</a></li>
+                        <li><a href="index.html#about">Giới Thiệu</a></li>
+                        <li><a href="contact.html">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Sản Phẩm</h4>
+                    <ul>
+                        <li><a href="#products">Gạo ST25</a></li>
+                        <li><a href="#products">Gạo Lai Miên</a></li>
+                        <li><a href="#products">Gạo Nếp Cái</a></li>
+                        <li><a href="#products">Gạo Hữu Cơ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Liên Hệ</h4>
+                    <p>📞 0910 926 839</p>
+                    <p>📧 thienlockhangrice@gmail.com</p>
+                    <p>📍 Q. Cầu Giấy, TP. Hà Nội</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Công Ty TNHH SX & TM Thiên Lộc Khang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ ORDER MODAL ============ -->
+    <div class="modal" id="orderModal">
+        <div class="modal__backdrop" onclick="closeModal()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle">Đặt Hàng</h3>
+            <p>Vui lòng liên hệ để đặt hàng sản phẩm <strong id="modalProduct"></strong></p>
+            <div class="modal__actions">
+                <a href="tel:0910926839" class="btn btn--primary btn--block">
+                    📞 Gọi: 0910 926 839
+                </a>
+                <a href="mailto:thienlockhangrice@gmail.com" class="btn btn--outline btn--block">
+                    📧 Email: thienlockhangrice@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PRODUCT DETAIL MODAL ============ -->
+    <div class="modal" id="productDetailModal">
+        <div class="modal__backdrop" onclick="closeProductDetailModal()"></div>
+        <div class="modal__content modal__content--large">
+            <button class="modal__close" onclick="closeProductDetailModal()">&times;</button>
+            <div class="product-detail">
+                <div class="product-detail__image">
+                    <img id="detailImage" src="" alt="">
+                    <div id="detailBadge" class="product-card__badge" style="display:none;"></div>
+                </div>
+                <div class="product-detail__info">
+                    <span id="detailCategory" class="product-card__category"></span>
+                    <h2 id="detailTitle" class="product-detail__title"></h2>
+                    <p id="detailDesc" class="product-detail__desc"></p>
+                    
+                    <div class="product-detail__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Trọng lượng</span>
+                            <span id="detailWeight" class="spec-value"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Hạn sử dụng</span>
+                            <span class="spec-value">12 tháng</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Đóng gói</span>
+                            <span class="spec-value">Tiêu chuẩn</span>
+                        </div>
+                    </div>
+
+                    <div class="product-detail__price-wrap">
+                        <span class="price-label">Giá bán:</span>
+                        <span id="detailPrice" class="product-detail__price"></span>
+                    </div>
+
+                    <div class="product-detail__actions">
+                        <button class="btn btn--primary btn--lg btn--block" id="detailOrderBtn">
+                            📞 Đặt Hàng Ngay
+                        </button>
+                    </div>
+
+                    <div class="product-detail__features">
+                        <h4>Đặc điểm nổi bật</h4>
+                        <ul>
+                            <li>🌾 100% gạo sạch nguyên chất</li>
+                            <li>🚫 Không chất bảo quản, tẩy trắng</li>
+                            <li>✨ Hạt gạo thon dài, tỷ lệ nguyên hạt cao</li>
+                            <li>🍚 Cơm dẻo, ngọt, thơm tự nhiên lâu dài</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

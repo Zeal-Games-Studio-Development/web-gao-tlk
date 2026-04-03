@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gạo Thơm ST25 Lộc Khang - Hạt Ngọc Trời Ban. Gạo sạch, chất lượng cao từ Công ty TNHH SX & TM Thiên Lộc Khang.">
+    <meta name="keywords" content="gạo ST25, gạo Lộc Khang, gạo thơm, gạo ngon nhất thế giới, mua gạo online">
+    <title>Gạo Thơm Lộc Khang - Hạt Ngọc Trời Ban | ST25 Premium Rice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-style="classic-green">
+
+    <!-- ============ FLOATING STYLE SWITCHER ============ -->
+    <div class="style-switcher" id="styleSwitcher">
+        <button class="style-switcher__toggle" id="styleSwitcherToggle" aria-label="Đổi giao diện">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <span>Style</span>
+        </button>
+        <div class="style-switcher__panel" id="styleSwitcherPanel">
+            <h4>Chọn Giao Diện</h4>
+            <div class="style-switcher__options">
+                <button class="style-option active" data-style="classic-green" title="Xanh Lá Cổ Điển">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #1a5c2e 0%, #2d8a4e 50%, #c9a84c 100%)"></span>
+                    <span class="style-option__name">Cổ Điển</span>
+                </button>
+                <button class="style-option" data-style="luxury-dark" title="Sang Trọng Tối">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #c9a84c 100%)"></span>
+                    <span class="style-option__name">Luxury</span>
+                </button>
+                <button class="style-option" data-style="warm-earth" title="Ấm Áp Đất">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #5c3d2e 0%, #a0522d 50%, #f4e4c1 100%)"></span>
+                    <span class="style-option__name">Ấm Áp</span>
+                </button>
+                <button class="style-option" data-style="modern-mint" title="Hiện Đại Bạc Hà">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #0d9488 0%, #a7f3d0 50%, #f0fdf4 100%)"></span>
+                    <span class="style-option__name">Bạc Hà</span>
+                </button>
+                <button class="style-option" data-style="royal-plum" title="Hoàng Gia Mận">
+                    <span class="style-option__preview" style="background: linear-gradient(135deg, #4a1942 0%, #893168 50%, #e8b4b8 100%)"></span>
+                    <span class="style-option__name">Hoàng Gia</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="nav__logo">
+                    <img src="images/logo.png" alt="Logo Thiên Lộc Khang" class="nav__logo-img">
+                </a>
+                <ul class="nav__menu" id="navMenu">
+                    <li><a href="index.html" class="nav__link">Trang Chủ</a></li>
+                    <li><a href="products.html" class="nav__link">Sản Phẩm</a></li>
+                    <li><a href="index.html#process" class="nav__link">Quy Trình</a></li>
+                    <li><a href="index.html#about" class="nav__link">Giới Thiệu</a></li>
+                    <li><a href="#contact" class="nav__link active" data-section="contact">Liên Hệ</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="tel:0910926839" class="btn btn--primary nav__cta">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Đặt Hàng
+                    </a>
+                    <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for Header -->
+    <div style="height: 100px;"></div>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-header__tag">Kết Nối</span>
+                <h2 class="section-header__title">Liên Hệ Với Chúng Tôi</h2>
+                <p class="section-header__desc">Đặt hàng hoặc tư vấn — chúng tôi luôn sẵn sàng phục vụ bạn</p>
+            </div>
+
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Địa Chỉ</h4>
+                            <p>Tầng 3, số 29C ngõ 58 ngách 23 đường Trần Bình, Phường Mai Dịch, Quận Cầu Giấy, TP. Hà Nội</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Hotline Đặt Hàng</h4>
+                            <p><a href="tel:0910926839">0910 926 839</a></p>
+                            <p><a href="tel:0916936839">091 693 68 39</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:thienlockhangrice@gmail.com">thienlockhangrice@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Fanpage</h4>
+                            <p><a href="#">Gạo Thơm ST25 Lộc Khang</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div>
+                            <h4>Thông Tin Doanh Nghiệp</h4>
+                            <p>MST: 0111026839</p>
+                            <p>CBCL: 01/THIENLOCKHANG/2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form-wrap">
+                    <form class="contact__form" id="contactForm" onsubmit="handleContactForm(event)">
+                        <h3>Gửi Yêu Cầu Tư Vấn</h3>
+                        <div class="form-group">
+                            <label for="contactName">Họ và Tên</label>
+                            <input type="text" id="contactName" name="name" placeholder="Nhập họ và tên..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Số Điện Thoại</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Nhập số điện thoại..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="Nhập email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Nội Dung</label>
+                            <textarea id="contactMessage" name="message" rows="4" placeholder="Nhập nội dung yêu cầu..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">Gửi Yêu Cầu</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Factory Info -->
+            <div class="contact__factory">
+                <h4>🏭 Nhà Máy Sản Xuất & Đóng Gói</h4>
+                <p><strong>Công ty TNHH MTV V.S Thiên Lộc Phú</strong></p>
+                <p>Xã Tân Trụ, Tỉnh Tây Ninh, Việt Nam</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="images/logo.png" alt="Logo Thiên Lộc Khang" class="nav__logo-img">
+                    </div>
+                    <p>Gạo Thơm ST25 — Hạt Ngọc Trời Ban. Tinh hoa gạo Việt, nâng niu bữa cơm Việt.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="products.html">Sản Phẩm</a></li>
+                        <li><a href="index.html#process">Quy Trình</a></li>
+                        <li><a href="index.html#about">Giới Thiệu</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Sản Phẩm</h4>
+                    <ul>
+                        <li><a href="products.html">Gạo ST25</a></li>
+                        <li><a href="products.html">Gạo Lai Miên</a></li>
+                        <li><a href="products.html">Gạo Nếp Cái</a></li>
+                        <li><a href="products.html">Gạo Hữu Cơ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Liên Hệ</h4>
+                    <p>📞 0910 926 839</p>
+                    <p>📧 thienlockhangrice@gmail.com</p>
+                    <p>📍 Q. Cầu Giấy, TP. Hà Nội</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Công Ty TNHH SX & TM Thiên Lộc Khang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ ORDER MODAL ============ -->
+    <div class="modal" id="orderModal">
+        <div class="modal__backdrop" onclick="closeModal()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle">Đặt Hàng</h3>
+            <p>Vui lòng liên hệ để đặt hàng sản phẩm <strong id="modalProduct"></strong></p>
+            <div class="modal__actions">
+                <a href="tel:0910926839" class="btn btn--primary btn--block">
+                    📞 Gọi: 0910 926 839
+                </a>
+                <a href="mailto:thienlockhangrice@gmail.com" class="btn btn--outline btn--block">
+                    📧 Email: thienlockhangrice@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PRODUCT DETAIL MODAL ============ -->
+    <div class="modal" id="productDetailModal">
+        <div class="modal__backdrop" onclick="closeProductDetailModal()"></div>
+        <div class="modal__content modal__content--large">
+            <button class="modal__close" onclick="closeProductDetailModal()">&times;</button>
+            <div class="product-detail">
+                <div class="product-detail__image">
+                    <img id="detailImage" src="" alt="">
+                    <div id="detailBadge" class="product-card__badge" style="display:none;"></div>
+                </div>
+                <div class="product-detail__info">
+                    <span id="detailCategory" class="product-card__category"></span>
+                    <h2 id="detailTitle" class="product-detail__title"></h2>
+                    <p id="detailDesc" class="product-detail__desc"></p>
+                    
+                    <div class="product-detail__specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Trọng lượng</span>
+                            <span id="detailWeight" class="spec-value"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Hạn sử dụng</span>
+                            <span class="spec-value">12 tháng</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Đóng gói</span>
+                            <span class="spec-value">Tiêu chuẩn</span>
+                        </div>
+                    </div>
+
+                    <div class="product-detail__price-wrap">
+                        <span class="price-label">Giá bán:</span>
+                        <span id="detailPrice" class="product-detail__price"></span>
+                    </div>
+
+                    <div class="product-detail__actions">
+                        <button class="btn btn--primary btn--lg btn--block" id="detailOrderBtn">
+                            📞 Đặt Hàng Ngay
+                        </button>
+                    </div>
+
+                    <div class="product-detail__features">
+                        <h4>Đặc điểm nổi bật</h4>
+                        <ul>
+                            <li>🌾 100% gạo sạch nguyên chất</li>
+                            <li>🚫 Không chất bảo quản, tẩy trắng</li>
+                            <li>✨ Hạt gạo thon dài, tỷ lệ nguyên hạt cao</li>
+                            <li>🍚 Cơm dẻo, ngọt, thơm tự nhiên lâu dài</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
