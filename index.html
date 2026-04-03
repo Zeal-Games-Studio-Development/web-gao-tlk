@@ -2,14 +2,25 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Gạo Thơm ST25 Lộc Khang - Hạt Ngọc Trời Ban. Gạo sạch, chất lượng cao từ Công ty TNHH SX & TM Thiên Lộc Khang.">
     <meta name="keywords" content="gạo ST25, gạo Lộc Khang, gạo thơm, gạo ngon nhất thế giới, mua gạo online">
+    <meta name="theme-color" content="#1a5c2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=yes">
     <title>Gạo Thơm Lộc Khang - Hạt Ngọc Trời Ban | ST25 Premium Rice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* iOS viewport height fix — --vh is set in px via JS */
+        .hero { min-height: calc(var(--vh, 1vh) * 100); }
+        @supports (height: 100svh) {
+            .hero { min-height: 100svh; }
+        }
+    </style>
 </head>
 <body data-style="classic-green">
 

@@ -2,6 +2,15 @@
    GẠO THƠM LỘC KHANG - JavaScript
    ============================================ */
 
+// iOS viewport height fix
+function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+
 document.addEventListener('DOMContentLoaded', () => {
     initStyleSwitcher();
     initNavigation();
@@ -9,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProductFilter();
     initScrollAnimations();
     initProductDetails();
+    initMobileUX();
 });
 
 /* ============ STYLE SWITCHER ============ */
@@ -80,6 +90,16 @@ function initNavigation() {
             hamburger.classList.remove('active');
             menu.classList.remove('open');
         });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (menu.classList.contains('open') &&
+            !e.target.closest('#navMenu') &&
+            !e.target.closest('#navHamburger')) {
+            hamburger.classList.remove('active');
+            menu.classList.remove('open');
+        }
     });
 
     // Header scroll effect
@@ -313,4 +333,59 @@ function handleContactForm(e) {
             </a>
         </div>
     `;
+}
+/* ============ MOBILE UX ============ */
+function initMobileUX() {
+    // Swipe down to close modals (bottom-sheet style on mobile)
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        const content = modal.querySelector('.modal__content');
+        if (!content) return;
+
+        let startY = 0;
+        let isDragging = false;
+
+        content.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+            isDragging = true;
+        }, { passive: true });
+
+        content.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const deltaY = e.touches[0].clientY - startY;
+            if (deltaY > 0 && content.scrollTop === 0) {
+                content.style.transform = `translateY(${Math.min(deltaY * 0.5, 80)}px)`;
+                content.style.transition = 'none';
+            }
+        }, { passive: true });
+
+        content.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            const deltaY = e.changedTouches[0].clientY - startY;
+            content.style.transform = '';
+            content.style.transition = '';
+
+            if (deltaY > 80) {
+                // Close the modal
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Prevent body scroll when modal is open
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+            if (mutation.target.classList.contains('modal')) {
+                if (mutation.target.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        });
+    });
+
+    modals.forEach(modal => {
+        observer.observe(modal, { attributes: true, attributeFilter: ['class'] });
+    });
 }
